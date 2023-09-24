@@ -41,6 +41,12 @@ dependencies:
   fireflutter: any
   google_nav_bar: any
   animated_button: any
+  flutter_spinkit: any
+  geolocator: any
+  geocoding: any
+  google_maps_flutter: any
+  location: any
+  intl: any
 
 dev_dependencies:
   flutter_test:
