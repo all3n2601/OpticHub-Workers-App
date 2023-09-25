@@ -1,27 +1,25 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'package:asa_optichub_worker/screens/profile_page.dart';
-import 'package:asa_optichub_worker/screens/settings_page.dart';
-import 'package:asa_optichub_worker/screens/worker_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import 'map_page.dart';
+import 'admin_home.dart';
+import 'admin_register.dart';
+import 'admin_settings.dart';
+import 'admin_tracking_page.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class AdminHome extends StatefulWidget {
+  const AdminHome({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<AdminHome> createState() => _AdminHomeState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _AdminHomeState extends State<AdminHome> {
   int _selectedIndex = 0;
   final List<Widget Function()> _pages = [
-    () => WorkerHomePage(),
-    () => MapPage(),
-    ()=> SettingsPage(),
-    ()=> ProfilePage()
+        () => AdminHomePage(),
+        () => AdminTracking(),
+        ()=> AdminRegister(),
+        ()=> AdminSettings()
   ];
   @override
   Widget build(BuildContext context) {
